@@ -6,6 +6,8 @@ public class StopWatch {
 
     private final TimeUnit timeUnit;
 
+    private int i;
+
     public StopWatch(TimeUnit timeUnit) {
         this.timeUnit = timeUnit;
     }
@@ -26,7 +28,7 @@ public class StopWatch {
         }
 
         String color = threadColor.getColor();
-        for (int i = unitCount; i> 0; i--){
+        for (i = unitCount; i> 0; i--){
             try{
                 timeUnit.sleep(1);
             } catch (InterruptedException e){
