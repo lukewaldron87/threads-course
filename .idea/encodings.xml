@@ -11,6 +11,10 @@
     <file url="file://$PROJECT_DIR$/4-multiple-threads/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/5-synchronization/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/5-synchronization/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/6-consumer-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/6-consumer-producer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/7-consumer-producer-challenge/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/7-consumer-producer-challenge/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
