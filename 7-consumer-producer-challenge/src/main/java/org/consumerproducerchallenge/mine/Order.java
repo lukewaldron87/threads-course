@@ -1,4 +1,4 @@
-package org.consumerproducerchallenge;
+package org.consumerproducerchallenge.mine;
 
 public record Order(
         long id,

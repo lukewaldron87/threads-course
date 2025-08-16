@@ -1,11 +1,11 @@
-package org.consumerproducerchallenge;
+package org.consumerproducerchallenge.mine;
 
 import java.util.List;
 import java.util.Random;
 
 public class OrdererProducer implements Runnable{
 
-    private ShoeWarehouse shoeWarehouse;
+    private final ShoeWarehouse shoeWarehouse;
 
     private final List<Order> orders = List.of(
             new Order(1L, ShotType.BOOT, 10),

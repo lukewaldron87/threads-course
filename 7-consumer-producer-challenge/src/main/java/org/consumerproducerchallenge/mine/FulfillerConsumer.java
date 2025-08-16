@@ -1,10 +1,10 @@
-package org.consumerproducerchallenge;
+package org.consumerproducerchallenge.mine;
 
 import java.util.Random;
 
 public class FulfillerConsumer implements Runnable{
 
-    private ShoeWarehouse shoeWarehouse;
+    private final ShoeWarehouse shoeWarehouse;
 
     private final String name;
 
@@ -22,8 +22,9 @@ public class FulfillerConsumer implements Runnable{
         Order latestOrder;
 
         do{
+
             try {
-                Thread.sleep(random.nextInt(500, 2000));
+                Thread.sleep(random.nextInt(2000, 5000));
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

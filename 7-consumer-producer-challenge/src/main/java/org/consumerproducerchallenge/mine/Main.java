@@ -1,4 +1,4 @@
-package org.consumerproducerchallenge;
+package org.consumerproducerchallenge.mine;
 
 public class Main {
     public static void main(String[] args) {

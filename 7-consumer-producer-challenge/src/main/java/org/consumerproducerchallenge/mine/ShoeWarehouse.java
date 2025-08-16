@@ -1,44 +1,42 @@
-package org.consumerproducerchallenge;
+package org.consumerproducerchallenge.mine;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShoeWarehouse {
 
-    private List<Order> orders = new ArrayList<>();
-    private boolean hasOrder = false;
+    private final List<Order> orders = new ArrayList<>();
+    private static final int MAXIMUM_ORDERS = 5;
 
     public synchronized void receiveOrder(Order order) {
 
-        while (hasOrder) {
+        if(orders.size() == MAXIMUM_ORDERS) {
+            System.out.println("Orders full waiting to add: " + order);
             try {
                 wait();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            hasOrder = true;
-            notifyAll();
-            orders.add(order);
-            System.out.println("Order received: " + order);
         }
+
+        notifyAll();
+        orders.add(order);
+        System.out.println("Order received: " + order);
     }
 
-    public Order fulfillOrder() {
+    public synchronized Order fulfillOrder() {
 
-        while (!hasOrder) {
+        while (orders.isEmpty()) {
+
             try {
                 wait();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            hasOrder = false;
-            notifyAll();
 
         }
 
-        if(orders.isEmpty()){
-            return null;
-        }
+        notifyAll();
         Order order = orders.getFirst();
         orders.removeFirst();
         return order;
