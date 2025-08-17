@@ -38,5 +38,7 @@ public class OrdererProducer implements Runnable{
             }
         }
 
+        System.out.println("All orders added");
+
     }
 }

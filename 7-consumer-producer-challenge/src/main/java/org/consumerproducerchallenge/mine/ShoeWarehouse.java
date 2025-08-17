@@ -7,6 +7,7 @@ public class ShoeWarehouse {
 
     private final List<Order> orders = new ArrayList<>();
     private static final int MAXIMUM_ORDERS = 5;
+    private boolean orderAdded = false;
 
     public synchronized void receiveOrder(Order order) {
 
@@ -21,12 +22,13 @@ public class ShoeWarehouse {
 
         notifyAll();
         orders.add(order);
+        orderAdded = true;
         System.out.println("Order received: " + order);
     }
 
     public synchronized Order fulfillOrder() {
 
-        while (orders.isEmpty()) {
+        while (!orderAdded  && orders.isEmpty()) {
 
             try {
                 wait();
@@ -34,6 +36,10 @@ public class ShoeWarehouse {
                 throw new RuntimeException(e);
             }
 
+        }
+
+        if(orders.isEmpty()){
+            return null;
         }
 
         notifyAll();
