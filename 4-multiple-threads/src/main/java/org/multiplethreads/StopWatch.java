@@ -6,6 +6,7 @@ public class StopWatch {
 
     private final TimeUnit timeUnit;
 
+    // made global to demonstrate time slicing
     private int i;
 
     public StopWatch(TimeUnit timeUnit) {

@@ -1,4 +1,4 @@
-package org.consumerproducerchallenge.mine;
+package org.consumerproducerchallenge.mine.attemptone;
 
 public enum ShotType {
     TRAINER("Trainer"),

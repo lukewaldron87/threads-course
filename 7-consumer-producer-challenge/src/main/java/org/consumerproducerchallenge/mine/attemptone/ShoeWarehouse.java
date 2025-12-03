@@ -1,4 +1,4 @@
-package org.consumerproducerchallenge.mine;
+package org.consumerproducerchallenge.mine.attemptone;
 
 import java.util.ArrayList;
 import java.util.List;

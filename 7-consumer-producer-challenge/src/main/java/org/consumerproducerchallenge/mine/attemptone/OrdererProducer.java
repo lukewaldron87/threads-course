@@ -1,4 +1,4 @@
-package org.consumerproducerchallenge.mine;
+package org.consumerproducerchallenge.mine.attemptone;
 
 import java.util.List;
 import java.util.Random;
