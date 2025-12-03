@@ -31,10 +31,11 @@ public class ShoeWarehouse{
                 wait();
             } catch (InterruptedException e) {
                 System.out.println("ShoeWarehouse: receiveOrder wait interrupted");
+                throw new RuntimeException(e);
             }
         }
-        notifyAll();
         orders.add(order);
+        notifyAll();
         System.out.println("ShoeWarehouse: Order added, num of orders: " + orders.size());
     }
 
@@ -48,11 +49,12 @@ public class ShoeWarehouse{
                 wait();
             } catch (InterruptedException e) {
                 System.out.println("ShoeWarehouse: fulfillOrder wait interrupted");
+                throw new RuntimeException(e);
             }
         }
-        notifyAll();
         Order order = orders.removeFirst();
         System.out.println("ShoeWarehouse: Order fulfilled, num of orders: " + orders.size());
+        notifyAll();
         return order;
     }
 }
