@@ -26,17 +26,16 @@ public class ShoeWarehouse{
         // poll/loop indefinitely checking the size of the list
         // if list == MAX_SIZE call wait in loop
         while(orders.size() > MAX_SIZE) {
-            System.out.println("ShoeWarehouse: Orders full, waiting for fulfillment");
+            System.out.println("Received:, waiting for fulfillment");
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("ShoeWarehouse: receiveOrder wait interrupted");
                 throw new RuntimeException(e);
             }
         }
         orders.add(order);
         notifyAll();
-        System.out.println("ShoeWarehouse: Order added, num of orders: " + orders.size());
+        System.out.println("Received: Order added"+order+", num of orders: " + orders.size());
     }
 
     public synchronized Order fulfillOrder() {
@@ -44,16 +43,15 @@ public class ShoeWarehouse{
         // poll the list
         // if list empty wait in loop until order added
         while(orders.isEmpty()) {
-            System.out.println("ShoeWarehouse: Orders are empty, waiting for order");
+            System.out.println(Thread.currentThread().getName()+": Orders are empty, waiting for order");
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("ShoeWarehouse: fulfillOrder wait interrupted");
                 throw new RuntimeException(e);
             }
         }
         Order order = orders.removeFirst();
-        System.out.println("ShoeWarehouse: Order fulfilled, num of orders: " + orders.size());
+        System.out.println(Thread.currentThread().getName()+": Order fulfilled: "+order+", num of orders: " + orders.size());
         notifyAll();
         return order;
     }

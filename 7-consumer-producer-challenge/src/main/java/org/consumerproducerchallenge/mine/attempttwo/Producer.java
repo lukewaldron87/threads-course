@@ -22,7 +22,6 @@ public class Producer implements Runnable {
             int quantity = ThreadLocalRandom.current().nextInt(1, 10);
             Order order = new Order(i, product, quantity);
             shoeWarehouse.receiveOrder(order);
-            System.out.println("Producer: Added odder "+i+" for "+quantity+" of "+product);
         }
     }
 }

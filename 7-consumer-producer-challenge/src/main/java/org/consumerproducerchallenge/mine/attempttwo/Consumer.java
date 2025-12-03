@@ -15,7 +15,6 @@ public class Consumer implements Runnable {
         // - calling fulfillOrder for each item
         for (int i = 0; i < 5; i++) {
             Order order = shoeWarehouse.fulfillOrder();
-            System.out.println("Consumer: Order fulfilled: " + order);
         }
 
     }
