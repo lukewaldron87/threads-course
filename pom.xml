@@ -17,6 +17,7 @@
         <module>6-consumer-producer</module>
         <module>7-consumer-producer-challenge</module>
         <module>8-consumer-producer-lock</module>
+        <module>9-executors</module>
     </modules>
 
     <properties>
