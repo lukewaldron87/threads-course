@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/1-threads/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/1-threads/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-executorservice-challenge/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-executorservice-challenge/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2-running-threads/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2-running-threads/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/3-thread-challenge/src/main/java" charset="UTF-8" />
