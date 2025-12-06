@@ -4,16 +4,29 @@ import java.util.concurrent.ThreadFactory;
 
 public class ColorThreadFactory implements ThreadFactory {
 
-    String threadName;
+    private String threadName;
+
+    private int colorValue;
 
     public ColorThreadFactory(ThreadColor threadColor) {
         this.threadName = threadColor.name();
     }
 
+    public ColorThreadFactory() {
+    }
+
     @Override
     public Thread newThread(Runnable r) {
         Thread thread = new Thread(r);
-        thread.setName(threadName);
+        String name = threadName;
+        if (name == null) {
+            name = ThreadColor.values()[colorValue].name();
+        }
+
+        if(++colorValue > (ThreadColor.values().length - 1)) {
+            colorValue = 1;
+        }
+        thread.setName(name);
         return thread;
     }
 }
