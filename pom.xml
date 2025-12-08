@@ -19,6 +19,7 @@
         <module>8-consumer-producer-lock</module>
         <module>9-executors</module>
         <module>10-executorservice-challenge</module>
+        <module>11-scheduling-tasks</module>
     </modules>
 
     <properties>
