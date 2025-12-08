@@ -20,6 +20,7 @@
         <module>9-executors</module>
         <module>10-executorservice-challenge</module>
         <module>11-scheduling-tasks</module>
+        <module>12-parallel-processing</module>
     </modules>
 
     <properties>
