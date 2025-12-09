@@ -22,6 +22,7 @@
         <module>11-scheduling-tasks</module>
         <module>12-parallel-processing</module>
         <module>13-parallel-streams</module>
+        <module>14-parallel-streams-and-more</module>
     </modules>
 
     <properties>
