@@ -21,6 +21,7 @@
         <module>10-executorservice-challenge</module>
         <module>11-scheduling-tasks</module>
         <module>12-parallel-processing</module>
+        <module>13-parallel-streams</module>
     </modules>
 
     <properties>
