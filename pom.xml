@@ -23,6 +23,7 @@
         <module>12-parallel-processing</module>
         <module>13-parallel-streams</module>
         <module>14-parallel-streams-and-more</module>
+        <module>15-thread-problems</module>
     </modules>
 
     <properties>
