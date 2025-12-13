@@ -24,6 +24,7 @@
         <module>13-parallel-streams</module>
         <module>14-parallel-streams-and-more</module>
         <module>15-thread-problems</module>
+        <module>16-concurrency-extra</module>
     </modules>
 
     <properties>
